@@ -29,7 +29,7 @@ public class MainController {
     }*/
     //2: Poniendo el valor de name (si existe), o poniendo otro valor (haciendo uso de java.util.optional)
     @GetMapping("/")
-    public String welcome(@RequestParam("name") Optional<String> name, Model model){
+    public String welcome(@RequestParam("name") @NotNull Optional<String> name, @NotNull Model model){
         model.addAttribute("name", name.orElse("Mundo"));
         return "index";
     }

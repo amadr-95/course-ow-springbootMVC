@@ -39,7 +39,7 @@
 			<version>RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
-			<!-- supuestamente esta dependecia sirve para usar Live Reload con Thymeleaf y poder visualizar los cambios
+			<!-- supuestamente esta dependencia sirve para usar Live Reload con Thymeleaf y poder visualizar los cambios
 			 sin tener que relanzar el proyecto (tb hay que editar las properties), pero no funciona -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
