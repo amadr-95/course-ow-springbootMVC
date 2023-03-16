@@ -16,7 +16,7 @@ public class MainController {
 
     @GetMapping("/info")
     public String informacion(@NotNull Model model){
-        String info = "Soy Amador y estoy aprendiendo a generar diferentes vistas con un controlador.";
+        String info = "Soy Amador y estoy aprendiendo a generar diferentes vistas con un controlador";
         model.addAttribute("info", info);
         return "info";
     }

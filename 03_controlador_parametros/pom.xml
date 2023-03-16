@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.openwebinars</groupId>
-	<artifactId>02_controlador</artifactId>
+	<artifactId>03_controlador</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>02_controlador</name>
 	<description>Ejemplo de controlador</description>
