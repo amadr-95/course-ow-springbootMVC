@@ -12,7 +12,7 @@
 	<groupId>com.openwebinars</groupId>
 	<artifactId>03_controlador</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>02_controlador</name>
+	<name>03_controlador</name>
 	<description>Ejemplo de controlador</description>
 	<properties>
 		<java.version>11</java.version>
