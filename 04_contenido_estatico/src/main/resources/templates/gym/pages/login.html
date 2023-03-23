@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Rubik Dirt' rel='stylesheet'>
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/4358b9453c.js" crossorigin="anonymous"></script>
+    <!--Estilos-->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="global-container">
+
+        <!--------------------HEADER-------------------->
+        <header>
+            <a href="/"><img src="/images/logo.png" alt="Logo de la web"></a>
+        </header>
+        <!--------------------NAV BAR-------------------->
+        <div class="nav-bar">
+            <div class="left-col">
+                <a href="/">Inicio</a>
+                <a href="/supplementation">Suplementación</a>
+                <a href="/training">Planes de entrenamiento</a>
+                <a href="/app">App</a>
+            </div>
+            <div class="right-col">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="/register">Registro</a>
+                <a href="/login">Login</a>
+            </div>
+        </div>
+        <!--------------------MAIN-------------------->
+        <div class="main-container">
+
+            <form action="/logged">
+                <div class="login">
+                    <h1>Login</h1>
+                    <label for="user">Nombre de usuario:</label>
+                    <input type="text" id="user" placeholder="Introduce tu user" required>
+
+                    <label for="pass">Introduce tu contraseña:</label>
+                    <input type="password" id="pass" placeholder="Introduce tu contraseña"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Debe incluir al menos 8 caracteres entre mayusculas, minusculas y numeros" required>
+
+                    <button type="submit"><strong>Entrar</strong></button>
+
+                    <label>
+                        <a href="/register"><strong>¿Aún no tienes cuenta?</strong></a>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <!--------------------FOOTER-------------------->
+        <footer>
+            <div class="footer-description">
+                <p>
+                    Hecho con <i class="fa-solid fa-heart"></i> para el módulo de Lenguaje de Marcas
+                </p>
+                <p>
+                    CFGS Desarrollo de Aplicaciones Web
+                </p>
+            </div>
+            <div>
+                <a href="https://iessoterohernandez.es/" target="_blank"><img src="/images/ies-sotero.png"
+                        alt="IES logo"></a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Rubik Dirt' rel='stylesheet'>
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/4358b9453c.js" crossorigin="anonymous"></script>
+    <!--Estilos-->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="global-container">
+
+        <!--------------------HEADER-------------------->
+        <header>
+            <a href="/"><img src="/images/logo.png" alt="Logo de la web"></a>
+        </header>
+        <!--------------------NAV BAR-------------------->
+        <div class="nav-bar">
+            <div class="left-col">
+                <a href="/">Inicio</a>
+                <a href="/supplementation">Suplementación</a>
+                <a href="/training">Planes de entrenamiento</a>
+                <a href="/app">App</a>
+            </div>
+            <div class="right-col">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="/register">Registro</a>
+                <a href="/login">Login</a>
+            </div>
+        </div>
+        <!--------------------MAIN-------------------->
+
+        <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" target="_blank">
+            <div class="main-container">
+                <div class="main-form">
+                    <h1>Let's Keep In Touch</h1>
+                    <h2>Si te interesa el mundo del entrenamiento de fuerza no dudes en suscribirte! &nbsp; <i
+                            class="fa-regular fa-clipboard"></i></h2>
+
+                    <label for="user">Nombre de usuario*:</label>
+                    <input type="text" id="user" name="user" placeholder="Introduce tu user" required>
+
+                    <label for="name">Nombre*:</label>
+                    <input type="text" id="name" name="name" placeholder="Introduce tu nombre" required>
+
+                    <label for="surname">Apellidos*:</label>
+                    <input type="text" id="surname" name="surname" placeholder="Introduce tus apellidos" required>
+
+                    <label for="email">Correo electrónico*:</label>
+                    <input type="email" id="email" name="email" placeholder="example@yourdomain.com" required>
+
+                    <label for="birth">Fecha de nacimiento:</label>
+                    <input type="date" id="birth" name="birth">
+
+                    <label>Sexo:</label>
+                    <div class="marcacion">
+                        <input type="radio" id="man" name="sex" value="man">
+                        <label for="man">Hombre</label>
+                    </div>
+
+                    <div class="marcacion">
+                        <input type="radio" id="woman" name="sex" value="woman">
+                        <label for="woman">Mujer</label>
+                    </div>
+                    <div class="marcacion">
+                        <input type="radio" id="other" name="sex" value="other" checked>
+                        <label for="other">Prefiero no decirlo</label>
+                    </div>
+
+                    <label>Marca tus intereses principales:</label>
+
+                    <div class="marcacion">
+                        <input type="checkbox" id="push_day" name="interest1" value="push_day">
+                        <label for="push_day">Entrenamiento de empujes</label>
+                    </div>
+
+                    <div class="marcacion">
+                        <input type="checkbox" id="pull_day" name="interest2" value="pull_day">
+                        <label for="pull_day">Entrenamiento de tirones</label>
+                    </div>
+
+                    <div class="marcacion">
+                        <input type="checkbox" id="leg_day" name="interest3" value="leg_day">
+                        <label for="leg_day">Entrenamiento de piernas</label>
+                    </div>
+
+                    <div class="marcacion">
+                        <input type="checkbox" id="nutrition" name="interest4" value="nutrition">
+                        <label for="nutrition">Suplementación</label>
+                    </div>
+
+                    <label for="pass">Introduce una contraseña*:</label>
+                    <input type="password" id="pass" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Debe incluir al menos 8 caracteres entre mayusculas, minusculas y numeros" required>
+
+                    <div class="form-buttons">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar formulario</button>
+                    </div>
+                    <div class="marcacion">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Al inscribirse acepta los términos y condiciones*</label>
+                    </div>
+                    <p><br>Los campos marcados con <strong>*</strong> son obligatorios.</p>
+                </div>
+            </div>
+        </form>
+
+        <!--------------------FOOTER-------------------->
+        <footer>
+            <div class="footer-description">
+                <p>
+                    Hecho con <i class="fa-solid fa-heart"></i> para el módulo de Lenguaje de Marcas
+                </p>
+                <p>
+                    CFGS Desarrollo de Aplicaciones Web
+                </p>
+            </div>
+            <div>
+                <a href="https://iessoterohernandez.es/" target="_blank"><img src="/images/ies-sotero.png"
+                        alt="IES logo"></a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
