@@ -14,37 +14,37 @@ public class MainController {
 
     @GetMapping("/")
     public String welcome(){
-        return "gym/index";
+        return "index";
     }
 
     @GetMapping("/supplementation")
     public String supplemetation(){
-        return "gym/pages/supplementation";
+        return "pages/supplementation";
     }
 
     @GetMapping("/training")
     public String training(){
-        return "gym/pages/training";
+        return "pages/training";
     }
 
     @GetMapping("/app")
     public String app(){
-        return "gym/pages/app";
+        return "pages/app";
     }
 
     @GetMapping("/register")
     public String register(){
-        return "gym/pages/register";
+        return "pages/register";
     }
 
     @GetMapping("/login")
     public String login(){
-        return "gym/pages/login";
+        return "pages/login";
     }
 
     @GetMapping("/logged")
     public String logged(){
-        return "gym/pages/logged";
+        return "pages/logged";
     }
 
 }
