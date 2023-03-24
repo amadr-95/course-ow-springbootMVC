@@ -9,14 +9,16 @@ public class Empleado {
 	private String nombre;
 	private String email;
 	private String telefono;
+	private boolean directivo;
 	
 	public Empleado() { }
 
-	public Empleado(long id, String nombre, String email, String telefono) {
+	public Empleado(long id, String nombre, String email, String telefono, boolean directivo) {
 		this.id = id;
 		this.nombre = nombre;
 		this.email = email;
 		this.telefono = telefono;
+		this.directivo = directivo;
 	}
 
 	public long getId() {
@@ -49,6 +51,14 @@ public class Empleado {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
+	}
+
+	public boolean getDirectivo(){
+		return directivo;
+	}
+
+	public void setDirectivo(Boolean directivo){
+		this.directivo = directivo;
 	}
 
 	@Override

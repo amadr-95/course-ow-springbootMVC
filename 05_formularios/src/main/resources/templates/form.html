@@ -89,10 +89,30 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="telefono">Telefono</label>
                     <div class="col-md-4">
-                        <input id="telefono" name="telefono" type="number" th:field="*{telefono}"
+                        <input id="telefono" name="telefono" type="tel" th:field="*{telefono}"
                                class="form-control input-md">
                     </div>
                 </div>
+
+                <!-- DIRECTIVO-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Rol del nuevo empleado:</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label for="radios-0">
+                                <input type="radio" name="radios" id="radios-0"  value="false" th:field="*{directivo}" checked>
+                                Empleado
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="radios-1">
+                                <input type="radio" name="radios" id="radios-1" value="true" th:field="*{directivo}">
+                                Directivo
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
                 <!--BUTTONS-->
                 <div class="form-buttons">
                     <button type="submit">Enviar</button>
