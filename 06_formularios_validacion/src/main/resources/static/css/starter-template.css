@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+}
+
+th{
+    text-align: center;
+}
+
+.fa-check{
+    color: green;
+}
+
+.fa-xmark{
+    color: red;
+}
