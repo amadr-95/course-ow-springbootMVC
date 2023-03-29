@@ -16,3 +16,11 @@ body {
 th{
     text-align: center;
 }
+
+.fa-check{
+    color: green;
+}
+
+.fa-xmark{
+    color: red;
+}
