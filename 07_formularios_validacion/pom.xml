@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.openwebinars.spring</groupId>
-	<artifactId>06_formularios_validacion</artifactId>
+	<artifactId>07_formularios_validacion</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>06_formularios_edicion</name>
+	<name>07_formularios_edicion</name>
 	<description>Ejemplo de elementos validados en un formulario con Thymeleaf</description>
 
 	<parent>

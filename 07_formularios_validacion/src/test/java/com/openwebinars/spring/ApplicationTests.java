@@ -1,4 +1,4 @@
-package com.openwebinars.spring;
+/*package com.openwebinars.spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +11,19 @@ public class ApplicationTests {
 
 	@Test
 	public void contextLoads() {
+	}
+
+}*/
+package com.openwebinars.spring;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ApplicationTests {
+
+	@Test
+	void contextLoads() {
 	}
 
 }
