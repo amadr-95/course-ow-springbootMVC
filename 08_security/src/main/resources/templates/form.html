@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title th:text="${empleadoForm.id > 0} ? 'Edición' : 'Registro'">Registro</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/starter-template.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]-->
+    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+    <!--[endif]-->
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">OW</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Inicio</a></li>
+                <li class="active"><a href="#">Nuevo empleado</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Menú <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="javascript:document.getElementById('logoutForm').submit()">Salir</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+<!--La peticion de logout se hace mediante POST, no GET-->
+<form th:action="@{/logout}" method="POST" id="logoutForm"></form>
+
+<div class="container">
+
+    <div class="starter-template">
+        <!--Para diferenciar si lo que queremos es registrar un nuevo usuario o editar uno existente, nos fijaremos en el ID:
+        Si vale 0 (valor por defecto), se interpreta que se va a crear un nuevo usuario. Cualquier otro valor es susceptible de ser editado-->
+        <form method="post" action="#" th:action="${empleadoForm.id > 0} ? @{/empleado/edit/submit} : @{/empleado/new/submit}" th:object="${empleadoForm}">
+            <div class="main-form">
+                <!-- Form Name -->
+                <legend th:text="${empleadoForm.id > 0} ? 'Editar empleado' : 'Nuevo empleado'"></legend>
+
+                <!-- ID-->
+                <div class="form-group" th:classappend="${#fields.hasErrors('id')} ? 'has-error'">
+                    <label class="col-md-4 control-label" for="id">ID</label>
+                    <div class="col-md-4">
+                        <!--Debemos tener en cuenta que cuando EDITAMOS un empleado, el campo ID no debe ser modificable-->
+                        <input id="id" name="ID" type="text" th:field="*{id}"
+                               th:attrappend="readonly=${empleadoForm.id > 0} ? 'readonly' : null" class="form-control input-md"
+                               required>
+                        <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="help-block" id="id-error">Errores</span>
+                    </div>
+                </div>
+
+                <!-- NOMBRE-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nombre">Nombre</label>
+                    <div class="col-md-4">
+                        <input id="nombre" name="Nombre" type="text" th:field="*{nombre}"
+                               class="form-control input-md" required>
+
+                    </div>
+                </div>
+
+                <!-- EMAIL-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Email</label>
+                    <div class="col-md-4">
+                        <input id="email" name="Email" type="email" placeholder="email@example.com"
+                               th:field="*{email}"
+                               class="form-control input-md">
+                    </div>
+                </div>
+
+                <!-- TELEFONO-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="telefono">Telefono</label>
+                    <div class="col-md-4">
+                        <input id="telefono" name="telefono" type="tel" th:field="*{telefono}"
+                               class="form-control input-md">
+                    </div>
+                </div>
+
+                <!-- DIRECTIVO-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Rol del nuevo empleado:</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label for="radios-0">
+                                <input type="radio" name="radios" id="radios-0"  value="false" th:field="*{directivo}" checked>
+                                Empleado
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="radios-1">
+                                <input type="radio" name="radios" id="radios-1" value="true" th:field="*{directivo}">
+                                Directivo
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--BUTTONS-->
+                <div class="form-buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar formulario</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
