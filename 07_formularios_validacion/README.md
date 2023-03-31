@@ -15,7 +15,17 @@ La variable del campo _directivo (boolean)_ se recoge con un icono.
 Permite rellenar los diferentes campos del objeto _Empleado_ que se pasa al controlador.  
 Con la anotacion `@PostMapping("/new/empleado/submit")` realizamos la accion al pulsar sobre el boton de **enviar**, 
 que es introducir al nuevo empleado en la Lista (definida en la clase _EmpleadoService_) 
-y redirigir hacia la URL del listado para ver que se ha insertado correctamente.
+y redirigir hacia la URL del listado para ver que se ha insertado correctamente.  
+Se añaden validaciones a las diferentes propiedades de la clase _Empleado_ mediante las  
+anotaciones `@Min, @NotEmpty ...`. Para hacer uso de estas anotaciones tambien es necesario
+añadir la siguiente depedencia en el pom.xml:  
+`<dependency>`  
+`<groupId>org.springframework.boot</groupId>`  
+`<artifactId>spring-boot-starter-validation</artifactId>`  
+`</dependency>`  
+La gestión de los posibles errores en estas validaciones se hace mediante la clase `MyConfig`,
+cuyos métodos estan anotados con `@Bean`. Tambien se crea un archivo `errors.properties`
+con los mensajes de error personalizados.
 
 ## Edición de un empleado
 Se rescata el objeto _Empleado_ con sus datos buscando por ID. Una vez editados  
