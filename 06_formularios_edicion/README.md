@@ -18,8 +18,10 @@ que es introducir al nuevo empleado en la Lista (definida en la clase _EmpleadoS
 y redirigir hacia la URL del listado para ver que se ha insertado correctamente.
 
 ## Edición de un empleado
-Se rescata el objeto _Empleado_ con sus datos buscando por ID. Una vez editados  
+Se rescata el objeto `Empleado` con sus datos buscando por ID. Una vez editados  
 los valores se inserta de nuevo en la lista, borrando el anterior (esto se lleva  
-a cabo gracias a los métodos _buscarID_ y _edit_ de la clase _EmpleadoService_).  
+a cabo gracias a los métodos `buscarID` y `edit` de la clase `EmpleadoService`).  
 Se reutiliza la plantilla de formulario tanto para crear nuevos usuarios como para  
-editar los ya existentes, haciendo uso de las funcionalidades de Thymeleaf.
+editar los ya existentes, haciendo uso de las funcionalidades de Thymeleaf.  
+**Nota:** Al editar un empleado, su campo de ID es de solo lectura, puesto que es una   
+referencia única y no deberia ser modificable.
