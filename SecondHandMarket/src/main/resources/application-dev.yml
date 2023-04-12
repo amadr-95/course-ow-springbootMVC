@@ -12,6 +12,15 @@ spring:
   #URL jdbc de conexion con la BD
   datasource:
     url: jdbc:h2:./openwebinars
+    #Usuario y contraseña de la BD
     username: sa
     password:
 
+  #Habilitamos la consola de H2
+  h2:
+    console:
+      enabled: true
+
+  #Habilitamos los mensajes sql en el log
+  jpa:
+    show-sql: true
